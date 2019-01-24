@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="./resources/bootstrap.min.css">
+	<link rel="stylesheet" href="./resources/fontello.css">
+    <link rel="stylesheet" href="./websy-viz/websy-table.css">
+	<link rel="stylesheet" href="./websy-viz/websy-kpi.css">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md fixed-top vitol-navbar">
+      <div class="container-fluid">
+        <div class="logo"></div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto vitol-nav-menu">
+            <li class="nav-item" data-sheet="#home">
+              <span>Home</span>
+            </li>
+            <li class="nav-item active vitol-navigator" data-sheet="#dashboard" data-element="dashboardOverview">
+              <span>Dashboard</span>
+            </li>
+            <li class="nav-item" data-sheet="#reports">
+              <span>Reports</span>
+            </li>
+          </ul>
+          <div class="vitol-search-button vitol-icon-search vitol-green"></div>
+        </div>
+      </div>
+    </nav>
+    <div class="vitol-main container-fluid">
+      <div class="vitol-sheet active" id="homeSheet">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <div class="vitol-card">
+
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <div class="vitol-card">
+
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <div class="vitol-card">
+
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="vitol-card">
+
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="vitol-card">
+
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="vitol-card">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="vitol-sheet" id="dashboardSheet">
+        <div class="vitol-sheet-child active" id="dashboardOverview">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              Trading
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <div class="row">
+                <div class="col-md">
+                  <div class="vitol-card vitol-navigator vitol-icon-info-circled" id="kpi1" data-element="varScreen" data-title="VaR 95">						
+                  </div>
+                </div>
+                <div class="col-md">
+                  <div class="vitol-card vitol-navigator" id="kpi2" data-element="demurrageMainScreen"  data-title="Outst. receiv. demurrage">
+						<span class="vitol-icon-info-circled"></span>
+                  </div>
+                </div>
+                <div class="col-md">
+                  <div class="vitol-card" id="kpi3">
+						<span class="vitol-icon-info-circled"></span>
+                  </div>
+                </div>
+                <div class="col-md">
+                  <div class="vitol-card">
+						<span class="vitol-icon-info-circled"></span>
+                  </div>
+                </div>
+                <div class="col-md">
+                  <div class="vitol-card">
+						<span class="vitol-icon-info-circled"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="vitol-sheet-child" id="varScreen">
+		  <div class="vitol-sheet-title">
+			<strong>Total VaR</strong> as of CoB 12-Jan-18 (AM), in USD mn
+		  </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="vitol-filter-group-container" id="siteLB"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+              <div class="vitol-card vitol-card-large vitol-card-table" id="VaRTable"  data-title="By trading portfolio">
+                
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+              <div class="vitol-card vitol-card-large" id="VaRLine"  data-title="Historical VaR">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+		
+		<div class="vitol-sheet-child" id="demurrageMainScreen">
+		  <div class="vitol-sheet-title">
+			<strong>Outstanding demurrage claims</strong> as of CoB 19-Jan-18
+		  </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="vitol-filter-group-container" id="siteLB_Demurrages"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <div class="vitol-card vitol-card-medium vitol-card-table" id="demurrageTable1"  data-title="By portfolio">
+                
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <div class="vitol-card vitol-card-medium vitol-card-table" id="demurrageTable2" data-title="By parent counter party">
+                
+              </div>
+            </div>
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <div class="vitol-card vitol-card-medium vitol-card-table" id="demurrageTable3" data-title="By region">
+                
+              </div>
+            </div>
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <div class="vitol-card vitol-card-medium vitol-card-table" id="demurrageTable4" data-title="By cost age (since creation)">
+                
+              </div>
+            </div>
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <div class="vitol-card vitol-card-medium vitol-card-table" id="demurrageTable5" data-title="By cost type">
+                
+              </div>
+            </div>
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <div class="vitol-card vitol-card-medium vitol-card-table" id="demurrageTable6" data-title="By Vitol co.">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="vitol-sheet" id="dashboard2Sheet">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <div class="vitol-card vitol-card-small vitol-blue text-center" id="kpi1">
+
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <div class="vitol-card vitol-card-small vitol-orange text-center" id="kpi2">
+
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <div class="vitol-card vitol-card-small vitol-green text-center" id="kpi3">
+
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="vitol-card vitol-card-large">
+              <div class="vitol-card-table" id="table1">
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div id="chart1" class="vitol-card vitol-card-medium">
+
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="vitol-card">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="vitol-sheet" id="reportsSheet">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="vitol-card">
+
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="vitol-card">
+
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="vitol-card">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./resources/jquery.min.js" charset="utf-8"></script>
+    <script src="./resources/popper.min.js" charset="utf-8"></script>
+    <script src="./resources/bootstrap.min.js" charset="utf-8"></script>
+    <script src="./resources/enigma.js" charset="utf-8"></script>
+    <script src="./resources/sense-utilities.js" charset="utf-8"></script>
+    <script src="./resources/echarts-en.js" charset="utf-8"></script>
+    <script src="./resources/12.170.2.js" charset="utf-8"></script>
+    <script src="./websy-viz/websy-table.js" charset="utf-8"></script>
+	<script src="./websy-viz/websy-kpi.js" charset="utf-8"></script>
+	<script src="./HomeItems.js" charset="utf-8"></script>
+	<script src="./VaRItems.js" charset="utf-8"></script>
+	<script src="./DemurragesItems.js" charset="utf-8"></script>
+	<script src="./HomeApp.js" charset="utf-8"></script>
+	<script src="./VaRApp.js" charset="utf-8"></script>
+	<script src="./DemurragesApp.js" charset="utf-8"></script>
+	<script src="./script.js" charset="utf-8"></script>
+  </body>
+</html>

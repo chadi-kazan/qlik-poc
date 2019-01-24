@@ -1,0 +1,192 @@
+.background {
+	color: #eaeaea
+}
+.background-bg {
+	background-color: #eaeaea
+}
+.vitol-green {
+	color: #029680
+}
+.vitol-green-bg {
+	background-color: #029680
+}
+.vitol-blue {
+	color: #002b55
+}
+.vitol-blue-bg {
+	background-color: #002b55
+}
+.vitol-black {
+	color: #010f1e
+}
+.vitol-black-bg {
+	background-color: #010f1e
+}
+.vitol-grey {
+	color: #eaeaea
+}
+.vitol-grey-bg {
+	background-color: #eaeaea
+}
+.vitol-orange {
+	color: #f7911e
+}
+.vitol-orange-bg {
+	background-color: #f7911e
+}
+@font-face {
+	font-family: 'vitol-poc';
+	src: url('./resources/vitol-poc.ttf?88333115') format('truetype');
+	font-weight: normal;
+	font-style: normal
+}
+[class^="vitol-icon-"]:before, [class*=" vitol-icon-"]:before {
+	font-family: "vitol-poc";
+	font-style: normal;
+	font-weight: normal;
+	speak: none;
+	display: inline-block;
+	text-decoration: inherit;
+	width: 1em;
+	margin-right: .2em;
+	text-align: center;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1em;
+	margin-left: .2em;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale
+}
+.vitol-icon-search:before {
+	content: '\e800'
+}
+html, body {
+	font-family: "Helvetica Neue", "Helvetica", "Arial";
+	font-size: 16px;
+	background-color: #eaeaea;
+	color: #010f1e
+}
+.text-center {
+	text-align: center
+}
+.vitol-main {
+	position: relative;
+	top: 100px
+}
+.vitol-card {
+	position: relative;
+	background-color: white;
+	height: 200px;
+	box-shadow: 1px 1px 1px #E2E2E2;
+	margin-bottom: 20px
+}
+.vitol-card.vitol-card-small {
+	height: 100px
+}
+.vitol-card.vitol-card-medium {
+	height: 300px
+}
+.vitol-card.vitol-card-large {
+	height: 500px
+}
+.vitol-card .vitol-card-table {
+	width: calc(100% - 40px);
+	padding: 10px 15px;
+	height: 100%
+}
+.vitol-sheet, .vitol-sheet-child {
+	display: none
+}
+.vitol-sheet.active, .vitol-sheet-child.active {
+	display: block
+}
+.vitol-menu-popup {
+	height: 200px
+}
+.vitol-kpi {
+	display: inline-block;
+	width: 200px;
+	border-right: 1px solid #eaeaea;
+	cursor: pointer
+}
+.vitol-kpi:last-of-type {
+	border-right: none
+}
+.popover {
+	max-width: 100%
+}
+.vitol-kpi-label {
+	padding-top: 14px
+}
+.vitol-kpi-value {
+	font-size: 50px;
+	height: 50px;
+	line-height: 50px
+}
+.vitol-navbar {
+	background-color: white;
+	height: 80px;
+	font-size: 13px;
+	text-transform: uppercase;
+	padding: 0;
+	box-shadow: 1px 1px 1px #eaeaea
+}
+.vitol-navbar .logo {
+	background-image: url(./resources/vitol-logo.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	height: 26px;
+	float: left;
+	width: 120px;
+	background-size: contain;
+	display: inline-block
+}
+.vitol-navbar .vitol-nav-menu {
+	list-style-type: none
+}
+.vitol-navbar .vitol-nav-menu li {
+	display: inline-block;
+	width: auto;
+	height: 80px;
+	margin-right: 20px;
+	cursor: pointer
+}
+.vitol-navbar .vitol-nav-menu li span {
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	margin-top: 25px;
+	box-sizing: border-box;
+	border-top: 3px solid white
+}
+.vitol-navbar .vitol-nav-menu li.active span {
+	border-top: 3px solid #029680
+}
+.vitol-navbar .vitol-search-button {
+	height: 30px;
+	width: 30px;
+	font-size: 22px
+}
+.vitol-filter-group-container .vitol-filter-button{
+	display: inline-block;
+    padding: 2px 20px;
+    background-color: #eaeaea;
+    font-size: 12px;
+	font-weight: bold;
+    cursor: pointer;
+    border: 1px solid #888;
+	border-right: none;
+}
+
+.vitol-filter-group-container ul{
+	padding: 0px;
+}
+
+.vitol-filter-group-container .vitol-filter-button:last-of-type{
+	border-right: 1px solid #888;
+}
+
+.vitol-filter-group-container .vitol-filter-button.active{
+	background-color: #888;
+	color: white;
+}
