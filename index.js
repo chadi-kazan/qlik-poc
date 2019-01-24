@@ -4,8 +4,8 @@ const crypto = require('crypto'),
       https = require('https');
 const qlikauth = require('qlik-auth');
 
-var privateKey = fs.readFileSync('../ssl/websy.pem', 'utf8');
-var certificate = fs.readFileSync('../ssl/certificate.pem', 'utf8');
+var privateKey = fs.readFileSync('./ssl/websy.pem', 'utf8');
+var certificate = fs.readFileSync('./ssl/certificate.pem', 'utf8');
 var credentials = {key: privateKey, cert: certificate};
 const express = require('express'),
       app = express();
